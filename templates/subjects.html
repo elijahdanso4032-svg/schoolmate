@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Subjects — SchoolMate{% endblock %}
+{% block content %}
+<h1>All Subjects</h1>
+<div class="grid">
+    {% for s in subjects %}
+    <div class="card">
+        <span class="icon">{{ s.icon }}</span>
+        <h3>{{ s.name }}</h3>
+        <p>{{ s.level }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

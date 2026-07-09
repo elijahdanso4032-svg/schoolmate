@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}SchoolMate — Lead Today{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Study smarter with SchoolMate</h1>
+    <p>AI-powered study support, built around Ghana's GES curriculum.</p>
+    <a href="{{ url_for('ask') }}" class="btn-primary">Ask a Question</a>
+</section>
+
+<section class="subjects-preview">
+    <h2>Subjects</h2>
+    <div class="grid">
+        {% for s in subjects %}
+        <div class="card">
+            <span class="icon">{{ s.icon }}</span>
+            <h3>{{ s.name }}</h3>
+            <p>{{ s.level }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

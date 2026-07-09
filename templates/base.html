@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SchoolMate — Lead Today{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="{{ url_for('home') }}" class="logo">
+                <span class="star">★</span> SchoolMate
+            </a>
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('subjects') }}">Subjects</a>
+                <a href="{{ url_for('ask') }}">Ask AI</a>
+            </nav>
+            <span class="tagline">Lead Today</span>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>SchoolMate &mdash; built for Ghana's GES curriculum. <strong>Lead Today.</strong></p>
+            <p class="credit">Created by Elijah Danso</p>
+        </div>
+    </footer>
+</body>
+</html>
